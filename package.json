@@ -1,0 +1,33 @@
+{
+  "name": "eat_da_burger",
+  "version": "1.0.0",
+  "description": "App, using Node Express Sequelize Handlebars and Bootstrap",
+  "main": "app.js",
+  "scripts": {
+    "test": "no tests written"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenBugs/eat_da_burger.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Sequelize",
+    "Handlebars",
+    "and",
+    "Bootstrap"
+  ],
+  "author": "Ben Cole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenBugs/eat_da_burger/issues"
+  },
+  "homepage": "https://github.com/BenBugs/eat_da_burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "save": "^2.4.0",
+    "sequelize": "^5.21.10"
+  }
+}
