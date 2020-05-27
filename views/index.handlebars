@@ -48,9 +48,9 @@
 
 
 <ul>
-    {{#each burgers}}
-    {{#unless sleepy}}
-    {{> cats/cat-block sleep=true}}
+    {{#each burger}}
+    {{#unless is_eaten}}
+    {{> eat-block is_eaten=true}}
     {{/unless}}
     {{/each}}
 </ul>
