@@ -19,12 +19,22 @@ router.get("/", function (req, res) {
 
 // Listening to a post request.
 router.post("/api/create_burger", function (req, res) {
+  console.log(req.body)
   models.burger_type.create({
     burger_name: req.body.name
   })
-  console.log(req.body.name)  // Request body is an object.
-  res.send('Hello world') // Response is a string.
 });
+  
+
+
+// // Listening to a post request.
+// router.post("/api/create_burger", function (req, res) {
+//   models.burger_type.create({
+//     burger_name: req.body.name
+//   })
+//   console.log(req.body.name)  // Request body is an object.
+//   res.send('Hello world') // Response is a string.
+// });
 
 
 

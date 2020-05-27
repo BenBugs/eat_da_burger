@@ -5,7 +5,7 @@
 <h1 class="text-center">Here's our menu.</h1>
 
 
-{{!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="/assets/diet-slayer.jpg" alt="First slide">
@@ -37,13 +37,13 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div> --}}
+</div>
 
 <form class="create-form text-center">
     <div class="form-group">
         <input type="text" id="burger_input" name="name">
     </div>
-    <button type="submit">PLACE ORDER</button>
+    <button type="submit" class="btn btn-warning">PLACE ORDER</button>
 </form>
 
 
@@ -52,5 +52,13 @@
     {{#unless is_eaten}}
     {{> eat-block is_eaten=true}}
     {{/unless}}
+    {{/each}}
+</ul>
+
+<ul>
+    {{#each burger}}
+    {{#if is_eaten}}
+    {{> trash-block is_eaten=false}}
+    {{/if}}
     {{/each}}
 </ul>
