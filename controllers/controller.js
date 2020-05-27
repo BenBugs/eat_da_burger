@@ -1,29 +1,21 @@
+// Routes listen to elements on page
+
 const express = require("express");
 const router = express.Router();
 
 // Import the model (burger_types.js) to use its database functions.
-const cat = require("../models/burger_type.js");
+const burger = require("../models/burger_type.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  cat.all(function(data) {
-    const hbsObject = {
-      cats: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
-});
 
-router.post("/api/cats", function(req, res) {
-  cat.create([
-    "name", "sleepy"
-  ], [
-    req.body.name, req.body.sleepy
-  ], function(result) {
-    // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.send("index");
   });
+
+// Listening to a post request.
+router.post("/api/create_burger", function(req, res) {
+    console.log(typeof req.body)  // Request body is an object.
+    res.send('Hello world') // Response is a string.
 });
 
 router.put("/api/cats/:id", function(req, res) {
