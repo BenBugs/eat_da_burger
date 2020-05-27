@@ -2,20 +2,27 @@
 
 const express = require("express");
 const router = express.Router();
-
-// Import the model (burger_types.js) to use its database functions.
-const burger = require("../models/burger_type.js");
+const burger = require("../models");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
-  res.render("index");
+  burger.burger_types.findAll().then((result) => {
+    console.log(result)
+  });
+  res.send("index");
 });
 
 // Listening to a post request.
 router.post("/api/create_burger", function (req, res) {
+  burger.burger_type.create({
+    burger_name: req.body.name
+  })
   console.log(req.body.name)  // Request body is an object.
   res.send('Hello world') // Response is a string.
 });
+
+
+
 
 // router.put("/api/cats/:id", function (req, res) {
 //   const condition = "id = " + req.params.id;
