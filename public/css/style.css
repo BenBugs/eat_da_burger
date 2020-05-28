@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+    color: #404040;
+    font-size: 38px;
+}
+
+
+/* external css: flickity.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+body { font-family: sans-serif; }
+  
+.gallery {
+    background: #fff;
+}
+  
+.gallery-cell {
+    width: 66%;
+    height: 210px;
+    margin-right: 10px;
+    background: #fff;
+    counter-increment: gallery-cell;
+}
+  
+
+.flickity-page-dots {
+    display: none;
+}
+
+#burger-input {
+    border: #fff;
+}
+
+.burger-input-border {
+    border: #e20014;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.burger-carousel {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.flickity-button-icon {
+    color: #404040;
+}
+
+
+.bg-atts {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.image-1 {
+background-image: url('/assets/diet-slayer.jpg');
+}
+.image-2 {
+    background-image: url('/assets/bad-dog.jpg');
+}
+.image-3 {
+    background-image: url('/assets/fish-flamer.jpg');
+}
+.image-4 {
+    background-image: url('/assets/fries.jpg');
+}
+.image-5 {
+    background-image: url('/assets/the-naked.jpg');
+}
+.image-6 {
+    background-image: url('/assets/tuff-muffin.jpg');
+}
+.image-7 {
+    background-image: url('/assets/chicke-thing.jpg');
+}
+    
