@@ -1,5 +1,5 @@
 <div class="text-center mt-2">
-  <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" width="75" height="75">
+  <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" width="70" height="70">
 </div>
 
 <h1 class="text-center mt-3">Here's our menu.</h1>
@@ -29,9 +29,10 @@
 {{!-- Ordered burgers. --}}
 
 <div class="container">
+
   <div class="row">
     <div class="col-sm">
-      <ul>
+      <ul class="list-group list-group-flush">
         {{#each burger}}
         {{#unless is_eaten}}
         {{> eat-block is_eaten=true}}
@@ -41,14 +42,14 @@
     </div>
 
     {{!-- Trashed burgers --}}
-    <ul>
-      {{#each burger}}
-      {{#if is_eaten}}
-      {{> trash-block is_eaten=false}}
-      {{/if}}
-      {{/each}}
-    </ul>
-
+    <div class="col-sm">
+      <ul class="list-group list-group-flush">
+        {{#each burger}}
+        {{#if is_eaten}}
+        {{> trash-block is_eaten=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
   </div>
-</div>
 </div>
