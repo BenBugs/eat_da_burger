@@ -5,7 +5,7 @@ $(document).ready(function () {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     const newBurger = {
-      name: $("#burger_input").val().trim(),
+      name: $("#burger-input").val().trim(),
     };
 
     // Send the POST request.

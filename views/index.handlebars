@@ -1,50 +1,54 @@
- 
-<div class="text-center mt-3">
-    <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" width="80" height="80">
+<div class="text-center mt-2">
+  <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" width="75" height="75">
 </div>
 
-<h1 class="text-center mt-4">Here's our menu.</h1>
-
+<h1 class="text-center mt-3">Here's our menu.</h1>
 
 <!-- Flickity HTML init -->
-<div class="m-4">
-<div class="burger-carousel">
-<div class="gallery js-flickity"
-  data-flickity-options='{ "wrapAround": true }'>
-  <div class="gallery-cell image-1 bg-atts"></div>
-  <div class="gallery-cell image-2 bg-atts"></div>
-  <div class="gallery-cell image-3 bg-atts"></div>
-  <div class="gallery-cell image-4 bg-atts"></div>
-  <div class="gallery-cell image-5 bg-atts"></div>
-</div>
-</div>
-</div>
-
-
-<form class="create-form text-center mt-4 mb-4">
-    <div class="form-group">
-      <div class="burger-input-border"></div>
-        <input type="text" id="burger-input" name="name">
+<div class="m-3">
+  <div class="burger-carousel">
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+      <div class="gallery-cell image-1 bg-atts"></div>
+      <div class="gallery-cell image-2 bg-atts"></div>
+      <div class="gallery-cell image-3 bg-atts"></div>
+      <div class="gallery-cell image-4 bg-atts"></div>
+      <div class="gallery-cell image-5 bg-atts"></div>
     </div>
-      </div>
-    
-    <button type="submit" class="btn btn-warning mt-3">PLACE ORDER</button>
-</form>
+  </div>
+</div>
 
+{{!-- Form and button. --}}
+<div class="form-container">
+  <form class="create-form mt-2 mb-4">
+    <input type="text" class="burger-form" id="burger-input" name="name" placeholder="Enter your order">
+    <div class="burger-input-line"></div>
+    <button type="submit" class="btn btn-warning mt-4 btn-lg btn-block btn-custom">PLACE ORDER</button>
+  </form>
+</div>
 
-<ul>
-    {{#each burger}}
-    {{#unless is_eaten}}
-    {{> eat-block is_eaten=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
+{{!-- Ordered burgers. --}}
 
-<ul>
-    {{#each burger}}
-    {{#if is_eaten}}
-    {{> trash-block is_eaten=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <ul>
+        {{#each burger}}
+        {{#unless is_eaten}}
+        {{> eat-block is_eaten=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
 
+    {{!-- Trashed burgers --}}
+    <ul>
+      {{#each burger}}
+      {{#if is_eaten}}
+      {{> trash-block is_eaten=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+
+  </div>
+</div>
+</div>

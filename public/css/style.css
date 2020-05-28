@@ -9,9 +9,6 @@ h1 {
     font-size: 38px;
 }
 
-
-/* external css: flickity.css */
-
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -24,8 +21,8 @@ body { font-family: sans-serif; }
 }
   
 .gallery-cell {
-    width: 66%;
-    height: 210px;
+    width: 100%;
+    height: 230px;
     margin-right: 10px;
     background: #fff;
     counter-increment: gallery-cell;
@@ -36,14 +33,19 @@ body { font-family: sans-serif; }
     display: none;
 }
 
+.form-container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
 #burger-input {
     border: #fff;
 }
 
-.burger-input-border {
-    border: #e20014;
-    border-style: solid;
-    border-width: 4px;
+.burger-input-line {
+    background-color: #e20014;
+    height: 6px;
+    margin: 0 auto;
 }
 
 .burger-carousel {
@@ -51,10 +53,27 @@ body { font-family: sans-serif; }
     margin: 0 auto;
 }
 
+.burger-form {
+    font-family: 'Secular One', sans-serif;
+    max-width: 350px;
+    font-size: 38px;
+    color: #0058a3;
+}
+
+::placeholder {
+    color: #0058a3;
+}
+
+.btn-custom {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 0;
+}
+
 .flickity-button-icon {
     color: #404040;
 }
-
 
 .bg-atts {
     background-position: center center;
@@ -84,3 +103,4 @@ background-image: url('/assets/diet-slayer.jpg');
     background-image: url('/assets/chicke-thing.jpg');
 }
     
+  
