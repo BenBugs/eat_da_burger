@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const models = require("../models");
 
-// Create all our routes and set up logic within those routes where required.
+// Listening to a get request for index page.
 router.get("/", function (req, res) {
   models.burger_type.findAll({raw: true})
   .then((result) => {
@@ -12,7 +12,6 @@ router.get("/", function (req, res) {
     const hbsObject = {
       burger: result
     };
-
     res.render("index", hbsObject);
   });
 });
@@ -24,21 +23,26 @@ router.post("/api/create_burger", function (req, res) {
     burger_name: req.body.name
   })
 });
-  
 
+// router.put("/api/update_burger/:id", function (req, res) {
+//   const condition = "is_eaten = " + req.params.id;
 
-// // Listening to a post request.
-// router.post("/api/create_burger", function (req, res) {
-//   models.burger_type.create({
-//     burger_name: req.body.name
-//   })
-//   console.log(req.body.name)  // Request body is an object.
-//   res.send('Hello world') // Response is a string.
+//   console.log(condition);
+
+//   models.burger_type.update({
+//     is_eaten: req.body.is_eaten
+//   }, condition, function (result) {
+//     if (result.changedRows == 0) {
+//       // If no rows were changed, then the ID must not exist, so 404
+//       return res.status(404).end();
+//     } else {
+//       res.status(200).end();
+//     }
+//   });
 // });
 
 
-
-// router.put("/api/cats/:id", function (req, res) {
+// router.put("/api/create_burger/:id", function (req, res) {
 //   const condition = "id = " + req.params.id;
 
 //   console.log("condition", condition);
@@ -54,6 +58,7 @@ router.post("/api/create_burger", function (req, res) {
 //     }
 //   });
 // });
+
 
 // router.delete("/api/cats/:id", function (req, res) {
 //   const condition = "id = " + req.params.id;

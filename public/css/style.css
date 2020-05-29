@@ -9,6 +9,13 @@ h1 {
     font-size: 38px;
 }
 
+h2 {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+    color: #404040;
+    font-size: 30px;
+}
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -71,6 +78,14 @@ body { font-family: sans-serif; }
     border-radius: 0;
 }
 
+.btn-custom-small {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 0;
+    max-height: 31px;
+}
+
 .flickity-button-icon {
     color: #404040;
 }
@@ -100,7 +115,7 @@ background-image: url('/assets/diet-slayer.jpg');
     background-image: url('/assets/tuff-muffin.jpg');
 }
 .image-7 {
-    background-image: url('/assets/chicke-thing.jpg');
+    background-image: url('/assets/chicken-thing.jpg');
 }
     
   

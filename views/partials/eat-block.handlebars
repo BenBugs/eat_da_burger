@@ -1,8 +1,12 @@
 <li class="list-group-item">
-	<p> {{burger_name}} on the way!</p>
-
-	<button class="eat" data-id="{{id}}" data-is-eaten="{{is_eaten}}">
-		{{#if is_eaten}}EAT{{/if}}
-	</button>
-
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7 text-center eat">
+				<p> {{burger_name}} on the way!</p>
+			</div>
+			<div class="col-sm text-center">
+				<button class="btn btn-warning btn-custom-small eat" data-id="{{id}}" data-is-eaten="{{is_eaten}}">
+					EAT
+				</button>
+			</div>
 </li>

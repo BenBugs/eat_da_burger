@@ -1,8 +1,28 @@
-<li li class="list-group-item">
-	<p> {{burger_name}} is in the trash.</p>
-
-	<button class="eat" data-id="{{id}}" data-is-eaten="{{is_eaten}}">
-		{{#if is_eaten}}EAT{{/if}}
-	</button>
-
+<li class="list-group-item">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7 text-center">
+				<p> {{burger_name}} ready to trash!</p>
+			</div>
+			<div class="col-sm text-center">
+				<button class="btn btn-warning btn-custom-small eat" data-id="{{id}}" data-is-eaten="{{is_eaten}}">
+					TRASH
+				</button>
+			</div>
 </li>
+
+
+
+{{!-- 
+<li class="list-group-item">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7 text-center">
+				<p> {{burger_name}} ready to trash!</p>
+			</div>
+			<div class="col-sm text-center">
+			<button class="btn btn-warning btn-custom-small eat" data-id="{{id}}" data-is-eaten="{{is_eaten}}">
+				{{#if is_eaten}}TRASH{{/if}}
+			</button>
+			</div>
+</li> --}}

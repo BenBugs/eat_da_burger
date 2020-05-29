@@ -1,4 +1,4 @@
-<div class="text-center mt-2">
+<div class="text-center mt-3">
   <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" width="70" height="70">
 </div>
 
@@ -13,12 +13,14 @@
       <div class="gallery-cell image-3 bg-atts"></div>
       <div class="gallery-cell image-4 bg-atts"></div>
       <div class="gallery-cell image-5 bg-atts"></div>
+      <div class="gallery-cell image-6 bg-atts"></div>
+      <div class="gallery-cell image-7 bg-atts"></div>
     </div>
   </div>
 </div>
 
 {{!-- Form and button. --}}
-<div class="form-container">
+<div class="form-container p-3">
   <form class="create-form mt-2 mb-4">
     <input type="text" class="burger-form" id="burger-input" name="name" placeholder="Enter your order">
     <div class="burger-input-line"></div>
@@ -27,26 +29,26 @@
 </div>
 
 {{!-- Ordered burgers. --}}
-
-<div class="container">
-
+<div class="container mt-5 pl-5 pr-5 pt-3">
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm mb-5">
+      <h2 class="text-center">New orders.</h2>
       <ul class="list-group list-group-flush">
         {{#each burger}}
-        {{#unless is_eaten}}
-        {{> eat-block is_eaten=true}}
-        {{/unless}}
+        {{#if is_eaten}}
+        {{> eat-block is_eaten=false}}
+        {{/if}}
         {{/each}}
       </ul>
     </div>
 
     {{!-- Trashed burgers --}}
-    <div class="col-sm">
+    <div class="col-sm mb-5">
+      <h2 class="text-center">Trash them.</h2>
       <ul class="list-group list-group-flush">
         {{#each burger}}
         {{#if is_eaten}}
-        {{> trash-block is_eaten=false}}
+        {{> trash-block is_eaten=true}}
         {{/if}}
         {{/each}}
       </ul>
