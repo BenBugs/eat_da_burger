@@ -35,9 +35,9 @@
       <h2 class="text-center">New orders.</h2>
       <ul class="list-group list-group-flush">
         {{#each burger}}
-        {{#if is_eaten}}
+        {{#unless is_eaten}}
         {{> eat-block is_eaten=false}}
-        {{/if}}
+        {{/unless}}
         {{/each}}
       </ul>
     </div>
