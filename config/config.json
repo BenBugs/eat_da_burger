@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "M1l3sd4v1s!",
-    "database": "eat_da_burger",
-    "host": "localhost",
+    "username": "is1wxzjfsbwb6bhw",
+    "password": "b0wb082nj2jy7ogf",
+    "database": "w1xvenlnvjs9vd4t",
+    "host": "sabaik6fx8he7pua.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
