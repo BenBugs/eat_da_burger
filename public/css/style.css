@@ -178,9 +178,9 @@ background-image: url('/assets/diet-slayer.jpg');
 
 
 /* Media queries */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     .order-panel {
-        max-width: 500px;
+        max-width: 700px;
     }
 
     .logo {
