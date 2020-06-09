@@ -1,57 +1,64 @@
-<div class="text-center mt-3">
-  <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" width="70" height="70">
+<div class="text-center mt-4 mb-5">
+  <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" class="logo">
 </div>
 
-<h1 class="text-center mt-3">Here's our menu.</h1>
-
-<!-- Flickity HTML init -->
-<div class="m-3">
-  <div class="burger-carousel">
-    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-      <div class="gallery-cell image-1 bg-atts"></div>
-      <div class="gallery-cell image-2 bg-atts"></div>
-      <div class="gallery-cell image-3 bg-atts"></div>
-      <div class="gallery-cell image-4 bg-atts"></div>
-      <div class="gallery-cell image-5 bg-atts"></div>
-      <div class="gallery-cell image-6 bg-atts"></div>
-      <div class="gallery-cell image-7 bg-atts"></div>
-    </div>
-  </div>
-</div>
-
-{{!-- Form and button. --}}
-<div class="form-container p-3">
-  <form class="create-form mt-2 mb-4">
-    <input type="text" class="burger-form" id="burger-input" name="name" placeholder="Enter your order">
-    <div class="burger-input-line"></div>
-    <button type="submit" class="btn btn-warning mt-4 btn-lg btn-block btn-custom">PLACE ORDER</button>
-  </form>
-</div>
-
-{{!-- Ordered burgers. --}}
-<div class="container mt-5 pl-5 pr-5 pt-3">
+<div class="container-custom">
   <div class="row">
-    <div class="col-sm mb-5">
-      <h2 class="text-center">New orders.</h2>
-      <ul class="list-group list-group-flush">
-        {{#each burger}}
-        {{#unless is_eaten}}
-        {{> eat-block is_eaten=false}}
-        {{/unless}}
-        {{/each}}
-      </ul>
+    <div class="col-sm-12 col-md-6">
+      <div class="panel">
+
+        <h1 class="text-center mb-2">Here's our menu.</h1>
+
+        <!-- Flickity HTML init -->
+        <div class="m-3">
+          <div class="burger-carousel">
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+              <div class="gallery-cell image-1 bg-atts"></div>
+              <div class="gallery-cell image-2 bg-atts"></div>
+              <div class="gallery-cell image-3 bg-atts"></div>
+              <div class="gallery-cell image-4 bg-atts"></div>
+              <div class="gallery-cell image-5 bg-atts"></div>
+              <div class="gallery-cell image-6 bg-atts"></div>
+              <div class="gallery-cell image-7 bg-atts"></div>
+            </div>
+          </div>
+        </div>
+
+        {{!-- Form and button. --}}
+        <div class="form-container p-3">
+          <form class="create-form mb-4">
+            <input type="text" class="burger-form" id="burger-input" name="name" placeholder="Enter your order">
+            <div class="burger-input-line"></div>
+            <button type="submit" class="btn btn-warning mt-4 btn-lg btn-block btn-custom">PLACE ORDER</button>
+          </form>
+        </div>
+      </div>
     </div>
 
-    {{!-- Trashed burgers --}}
-    <div class="col-sm mb-5">
-      <h2 class="text-center">Trash them.</h2>
-      <ul class="list-group list-group-flush">
-        {{#each burger}}
-        {{#if is_eaten}}
-        {{> trash-block is_eaten=true}}
-        {{/if}}
-        {{/each}}
-      </ul>
+    <div class="col-sm-12 col-md-6 panel-line">
+      <div class="order-panel">
+        {{!-- Ordered burgers. --}}
+        <h2 class="text-center mt-1 mb-4">New orders.</h2>
+        <ul class="list-group list-group-flush mb-3">
+          {{#each burger}}
+          {{#unless is_eaten}}
+          {{> eat-block is_eaten=false}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+
+
+        {{!-- Trashed burgers --}}
+        <h2 class="text-center mt-5 mb-4">Trash them.</h2>
+        <ul class="list-group list-group-flush">
+          {{#each burger}}
+          {{#if is_eaten}}
+          {{> trash-block is_eaten=true}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
     </div>
+
   </div>
 </div>

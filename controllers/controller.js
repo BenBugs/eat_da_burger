@@ -1,10 +1,9 @@
 // Routes listen to elements on page
-
 const express = require("express");
 const router = express.Router();
 const models = require("../models");
 
-// Listening to a get request for index page.
+// Get request for index page.
 router.get("/", function (req, res) {
   models.burger_type.findAll({ raw: true })
     .then((result) => {
@@ -16,8 +15,7 @@ router.get("/", function (req, res) {
     });
 });
 
-
-// Listening to a post request.
+// Post request for new burgers.
 router.post("/api/create_burger", function (req, res) {
   models.burger_type.create(
     { burger_name: req.body.name },
@@ -25,7 +23,7 @@ router.post("/api/create_burger", function (req, res) {
   );
 });
 
-
+// Put request to update burger state to eaten.
 router.put("/api/update_burger/:id", function (req, res) {
   const burgerId = req.params.id;
 
@@ -38,7 +36,7 @@ router.put("/api/update_burger/:id", function (req, res) {
   )
 });
 
-
+// Delete request for eaten burgers.
 router.delete("/api/delete_burger/:id", function (req, res) {
   const condition = req.params.id;
 
