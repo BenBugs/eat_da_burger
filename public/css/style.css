@@ -3,8 +3,8 @@ body {
 }
 
 .logo {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
 }
 
 .container-custom {
@@ -70,6 +70,7 @@ body {
     background-color: #e20014;
     height: 6px;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .burger-carousel {
@@ -184,15 +185,16 @@ background-image: url('/assets/diet-slayer.jpg');
     }
 
     .logo {
-        width: 200px;
-        height: 200px;
+        width: 260px;
+        height: 260px;
+        margin-bottom: 20px;
     }
 
     h1 {
         font-family: 'Secular One', sans-serif;
         font-weight: 400;
         color: #404040;
-        font-size: 52px;
+        font-size: 60px;
         padding-bottom: 36px;
     }
     
@@ -200,13 +202,13 @@ background-image: url('/assets/diet-slayer.jpg');
         font-family: 'Secular One', sans-serif;
         font-weight: 400;
         color: #404040;
-        font-size: 52px;
+        font-size: 60px;
     }
 
     p {
         margin-top: 15px;
         margin-bottom: 18px;
-        font-size: 28px;
+        font-size: 36px;
     }
 
     .panel {
@@ -246,28 +248,31 @@ background-image: url('/assets/diet-slayer.jpg');
     }
 
     .btn-custom {
-        font-size: 30px;
+        font-size: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
     
     .btn-custom-small {
-        font-size: 22px;
+        font-size: 30px;
         max-height: 80px;
-        width: 130px;
+        width: 150px;
         margin-top: 10px;
         margin-bottom: 30px;
     }
 
     .burger-form {
-        font-size: 50px;
+        font-size: 58px;
         max-width: 570px;
+    }
+
+    .burger-input-line {
+        height: 6px;
+        margin-bottom: 40px;
+        margin-top: 15px;
     }
 
     .input {
         border: none;
     }
   }
-
-
-
-
-
