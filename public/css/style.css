@@ -10,7 +10,7 @@ body {
 .container-custom {
     max-width: 1400px;
     margin: 0 auto;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -275,5 +275,9 @@ background-image: url('/assets/diet-slayer.jpg');
 
     .input {
         border: none;
+    }
+
+    .container-custom {
+        margin-bottom: 120px;
     }
   }
