@@ -173,6 +173,11 @@ background-image: url('/assets/diet-slayer.jpg');
     background-image: url('/assets/chicken-thing.jpg');
 }
 
+.image-8 {
+    background-image: url('/assets/tofu_fawcett.jpg');
+}
+
+
 .list-group-item {
     padding-left: 0px;
     padding-right: 0px;
