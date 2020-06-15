@@ -15,13 +15,12 @@ A simple burger ordering application that allows the user to order from a carous
 - Questions
 
 ### Installation
-This app runs without the need for any instllation from the Heroku server environent.
+This app runs from the Heroku server environment, without the need for any installation.
 
 ### Usage
 To use, simply type your order then 'eat' or 'trash' the food afterwards.
 
 ### Contributors
-![Profile image](https://avatars0.githubusercontent.com/u/60494687?v=4)
 Ben Cole
 
 ### Tests
