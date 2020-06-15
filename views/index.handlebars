@@ -2,28 +2,14 @@
   <img src="/assets/bt_logo.gif" alt="Burger Thing Logo" class="logo">
 </div>
 
-<div class="container-custom">
+<div class="container-custom p-5">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-6">
       <div class="panel">
 
         <h1 class="text-center mb-2">Here's our menu.</h1>
 
-        <!-- Flickity HTML init -->
-        <div class="m-3">
-          <div class="burger-carousel">
-            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-              <div class="gallery-cell image-1 bg-atts"></div>
-              <div class="gallery-cell image-2 bg-atts"></div>
-              <div class="gallery-cell image-3 bg-atts"></div>
-              <div class="gallery-cell image-4 bg-atts"></div>
-              <div class="gallery-cell image-5 bg-atts"></div>
-              <div class="gallery-cell image-6 bg-atts"></div>
-              <div class="gallery-cell image-7 bg-atts"></div>
-              <div class="gallery-cell image-8 bg-atts"></div>
-            </div>
-          </div>
-        </div>
+        {{> carousel}}
 
         {{!-- Form and button. --}}
         <div class="form-container p-3">
@@ -37,6 +23,31 @@
     </div>
 
     <div class="col-sm-12 col-md-12 col-lg-6 panel-line">
+      <div class="order-panel">
+        {{!-- Ordered burgers. --}}
+        <h2 class="text-center mt-1 mb-4">New orders.</h2>
+        <ul class="list-group list-group-flush mb-3">
+          {{#each burger}}
+          {{#unless is_eaten}}
+          {{> eat-block is_eaten=false}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+
+
+        {{!-- Trashed burgers --}}
+        <h2 class="text-center mt-5 mb-4">Trash them.</h2>
+        <ul class="list-group list-group-flush">
+          {{#each burger}}
+          {{#if is_eaten}}
+          {{> trash-block is_eaten=true}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-6 panel-no-line">
       <div class="order-panel">
         {{!-- Ordered burgers. --}}
         <h2 class="text-center mt-1 mb-4">New orders.</h2>
