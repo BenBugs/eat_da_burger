@@ -200,6 +200,11 @@ background-image: url('/assets/diet-slayer.jpg');
     display: none;
 }
 
+.btn-custom-small {
+    margin-bottom: 12px;
+    width: 90px;
+}
+
 .order-btn {
     text-align: center;
 }
