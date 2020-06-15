@@ -118,6 +118,10 @@ text-align: right;
     margin-bottom: 80px;
 }
 
+.panel-no-line {
+    margin-bottom: 80px;
+}
+
 ::placeholder {
     color: #0058a3;
 }
@@ -182,7 +186,6 @@ background-image: url('/assets/diet-slayer.jpg');
     background-image: url('/assets/tofu_fawcett.jpg');
 }
 
-
 .list-group-item {
     padding-left: 0px;
     padding-right: 0px;
@@ -190,104 +193,27 @@ background-image: url('/assets/diet-slayer.jpg');
 
 
 /* Media queries */
-/* @media only screen and (max-width: 992px) {
-    .order-panel {
-        max-width: 700px;
-    }
+@media only screen and (max-width: 992px) {
+.panel-line {
+    display: none;
+}
 
-    .logo {
-        width: 260px;
-        height: 260px;
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-family: 'Secular One', sans-serif;
-        font-weight: 400;
-        color: #404040;
-        font-size: 60px;
-        padding-bottom: 36px;
-    }
-    
-    h2 {
-        font-family: 'Secular One', sans-serif;
-        font-weight: 400;
-        color: #404040;
-        font-size: 60px;
-    }
-
-    p {
-        margin-top: 15px;
-        margin-bottom: 18px;
-        font-size: 36px;
-    }
-
-    .panel {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .panel-line {
-        border-left: none;
-        margin-bottom: 0px;
-    }
-    
-    .burger-carousel {
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .gallery-cell {
-        height: 380px;
-    }
-
-    .form-container {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .order-btn {
-        text-align: center;
-    }
+.order-btn {
+    text-align: center;
+}
         
-    .eat {
-        text-align: center;
-    }
+.eat {
+    text-align: center;
+}
         
-    .trash {
-        text-align: center;
-    }
+.trash {
+    text-align: center;
+}
+}
 
-    .btn-custom {
-        font-size: 40px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-    
-    .btn-custom-small {
-        font-size: 30px;
-        max-height: 80px;
-        width: 150px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-    }
+@media only screen and (min-width: 993px) {
+.panel-no-line {
+    display: none;
+}
+}
 
-    .burger-form {
-        font-size: 58px;
-        max-width: 570px;
-    }
-
-    .burger-input-line {
-        height: 6px;
-        margin-bottom: 40px;
-        margin-top: 15px;
-    }
-
-    .input {
-        border: none;
-    }
-
-    .container-custom {
-        margin-bottom: 120px;
-    }
-  } */
