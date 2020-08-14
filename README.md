@@ -11,10 +11,10 @@ A simple burger ordering application that allows the user to order from a carous
 This app runs from the Heroku server environment, without the need for any installation.
 
 ### Usage
-Deployes application
+Deployed application.
 
 ### Contributors
-Ben Cole
+Ben Cole.
 
 ### Tests
 No test written for this project.
